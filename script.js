@@ -1193,7 +1193,7 @@ function draw(){
   if(output.data.banner_revision != undefined){
     profile.classList.add('has_banner')
 
-    profile.innerHTML += '<img class="tetra_modal_banner ns" src="https:/tetr.io/user-content/banners/' + output.data._id + '.jpg?rv=' + output.data.banner_revision + '">' 
+    profile.innerHTML += '<img class="tetra_modal_banner ns" src="https://tetr.io/user-content/banners/' + output.data._id + '.jpg?rv=' + output.data.banner_revision + '">' 
 
     profile.innerHTML += '<div class="tetra_modal_banner_sep ns"></div>' //banner sep
   }
