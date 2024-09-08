@@ -629,6 +629,11 @@ body{
   margin-bottom: 0;
 }
 
+.tetra_modal_record>h5.revolvedscore {
+  color: #7aa680;
+  text-shadow: 0 2px #345a36, 0 0 16px #fff1;
+}
+
 .tetra_modal_record_league img {
   height: 1.1em;
   vertical-align: -20%;
