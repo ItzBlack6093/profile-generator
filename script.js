@@ -1193,7 +1193,7 @@ function draw(){
   if(output.data.banner_revision != undefined){
     profile.classList.add('has_banner')
 
-    profile.innerHTML += '<img class="tetra_modal_banner ns" src="https://tetr.io/user-content/banners/' + output.data._id + '.jpg?rv=' + output.data.banner_revision + '">' 
+    profile.innerHTML += '<img class="tetra_modal_banner ns" src="https:/tetr.io/user-content/banners/' + output.data._id + '.jpg?rv=' + output.data.banner_revision + '">' 
 
     profile.innerHTML += '<div class="tetra_modal_banner_sep ns"></div>' //banner sep
   }
@@ -1372,14 +1372,14 @@ else {
       e.appendChild(a)
   }
   if (outputRecord.data.zenithex.record || outputRecord.data.zenithex.best.record) {
-      const t = outputRecord.data.zenithex
-        , i = t.record
-        , o = t.best.record
-        , a = document.createElement("div");
-      a.classList.add("tetra_modal_record"),
-      a.classList.add("flex-item"),
-      a.innerHTML = `\n\t\t\t\t\t\t<div class="tetra_modal_record_header">\n\t\t\t\t\t\t\t<h6>${dataset.Strings.longTypeNames.zenithex}</h6><\n\t\t\t\t\t\t\t<div class="standingset">\n\t\t\t\t\t\t\t\t${t.rank_local ? `\n\t\t\t\t\t\t\t\t\t<div class="standingset_local">${s} #<span>${t.rank_local.toLocaleString("en-US")}</span></div>\n\t\t\t\t\t\t\t\t` : ""}\n\t\t\t\t\t\t\t\t ${t.rank ? `\n\t\t\t\t\t\t\t\t\t<div class="standingset_global ${1 === t.rank ? "t1" : ""}" data-digits="${(t.rank - 1).toString().length}">#<span>${t.rank.toLocaleString("en-US")}</span></div>\n\t\t\t\t\t\t\t\t` : ""}\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t ${i ? `\n\t\t\t\t\t\t\t<h5 title="This week">${Math.floor(i.results.stats.zenith.altitude).toLocaleString("en-US")}<span class="ms">.${Math.floor(i.results.stats.zenith.altitude % 1 * 10)}</span><span class="unit">M</span></h5>\n\t\t\t\t\t\t` : `\n\t\t\t\t\t\t\t<h5 title="Not this week - player has not played this week" class="revolvedscore">${Math.floor(o.results.stats.zenith.altitude).toLocaleString("en-US")}<span class="ms">.${Math.floor(o.results.stats.zenith.altitude % 1 * 10)}</span><span class="unit">M</span></h5>\n\t\t\t\t\t\t`}\n\t\t\t\t\t\t ${i && o ? `\n\t\t\t\t\t\t\t<h3 title="Updates every week">career best <span>${Math.floor(o.results.stats.zenith.altitude).toLocaleString("en-US")}.${Math.floor(o.results.stats.zenith.altitude % 1 * 10)}</span>${Ml("M")} (#${t.best.rank.toLocaleString("en-US")})</h3>\n\t\t\t\t\t\t` : `\n\t\t\t\t\t\t\t<h3><span>${Bt(Date.parse((i ?? o).ts)).toUpperCase()}</span> ago</h3>\n\t\t\t\t\t\t`}`,
-      e.appendChild(a)
+    const t = outputRecord.data.zenithex
+    , i = t.record
+    , o = t.best.record
+    , a = document.createElement("div");
+  a.classList.add("tetra_modal_record"),
+  a.classList.add("flex-item"),
+  a.innerHTML = `\n\t\t\t\t\t\t<div class="tetra_modal_record_header">\n\t\t\t\t\t\t\t<h6>${dataset.Strings.longTypeNames.zenithex}</h6>\n\t\t\t\t\t\t\t<div class="standingset">\n\t\t\t\t\t\t\t\t${t.rank_local ? `\n\t\t\t\t\t\t\t\t\t<div class="standingset_local">${s} #<span>${t.rank_local.toLocaleString("en-US")}</span></div>\n\t\t\t\t\t\t\t\t` : ""}\n\t\t\t\t\t\t\t\t ${t.rank ? `\n\t\t\t\t\t\t\t\t\t<div class="standingset_global ${1 === t.rank ? "t1" : ""}" data-digits="${(t.rank - 1).toString().length}">#<span>${t.rank.toLocaleString("en-US")}</span></div>\n\t\t\t\t\t\t\t\t` : ""}\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t ${i ? `\n\t\t\t\t\t\t\t<h5 title="This week">${Math.floor(i.results.stats.zenith.altitude).toLocaleString("en-US")}<span class="ms">.${Math.floor(i.results.stats.zenith.altitude % 1 * 10)}</span><span class="unit">M</span></h5>\n\t\t\t\t\t\t` : `\n\t\t\t\t\t\t\t<h5 title="Not this week - player has not played this week" class="revolvedscore">${Math.floor(o.results.stats.zenith.altitude).toLocaleString("en-US")}<span class="ms">.${Math.floor(o.results.stats.zenith.altitude % 1 * 10)}</span><span class="unit">M</span></h5>\n\t\t\t\t\t\t`}\n\t\t\t\t\t\t ${i && o ? `\n\t\t\t\t\t\t\t<h3 title="Updates every week">career best <span>${Math.floor(o.results.stats.zenith.altitude).toLocaleString("en-US")}.${Math.floor(o.results.stats.zenith.altitude % 1 * 10)}</span>${Ml("M")} (#${t.best.rank.toLocaleString("en-US")})</h3>\n\t\t\t\t\t\t` : `\n\t\t\t\t\t\t\t<h3><span>${Bt(Date.parse((i ?? o).ts)).toUpperCase()}</span> ago</h3>\n\t\t\t\t\t\t`}`,
+  e.appendChild(a)  
   }
 
   {
@@ -1389,7 +1389,7 @@ else {
       , o = document.createElement("div");
     o.classList.add("tetra_modal_record"),
     o.classList.add("flex-item"),
-    o.innerHTML = `\n\t\t\t\t\t\t<div class="tetra_modal_record_header">\n\t\t\t\t\t\t\t<h6>${dataset.Strings.longTypeNames.zen}</h6>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5>${i.toLocaleString("en-US")}</h5>\n\t\t\t\t\t\t<h3>Level<span> ${l}</span></h3>`,
+    o.innerHTML = `\n\t\t\t\t\t\t<div class="tetra_modal_record_header">\n\t\t\t\t\t\t\t<h6>${dataset.Strings.longTypeNames.zen}</h6><h6>${Hiero(t.level)}</h6>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<h5>${i.toLocaleString("en-US")}</h5>\n\t\t\t\t\t\t<h3>Level<span> ${l}</span></h3>`,
     e.appendChild(o)
 }
 
