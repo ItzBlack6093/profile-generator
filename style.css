@@ -1,0 +1,733 @@
+@font-face {
+    font-family: HUN;
+    src: url('hun2.ttf');
+}
+
+body{
+  background-color: gray;
+}
+
+#level-tag {
+    position: relative;
+    display: inline-block;
+    font-size: 1.1em;
+    padding-top: .3em;
+    padding-left: .3em;
+    padding-bottom: 0;
+    padding-right: 1em;
+    line-height: .9em;
+    color: #000D;
+    font-weight: 900;
+    text-shadow: 0 0 2px #0006;
+}
+  #level-tag::before {
+    content: '';
+    padding-top: 0.2em;
+    padding-left: 0.3em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: -1;
+  }
+  #level-tag::after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 0.5em);
+    top: 0;
+    bottom: 0;
+    width: 1.5em;
+    background-color: red;
+  }
+  .level-tag.level-tag-shape-0::before {
+    clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-shape-0::after {
+    clip-path: polygon(0.7em 0, 1em 0, 0.3em 100%, 0 100%);
+  }
+  .level-tag.level-tag-shape-1::before {
+    clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-shape-1::after {
+    clip-path: polygon(0.7em 0, 1.4em 100%, 0 100%);
+  }
+  .level-tag.level-tag-shape-2::before {
+    clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.6em) 50%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-shape-2::after {
+    clip-path: polygon(0.7em 0, 0.1em 50%, 0.7em 100%, 1.3em 50%);
+  }
+  .level-tag.level-tag-shape-3::before {
+    clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.5em) 50%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-shape-3::after {
+    clip-path: polygon(0.7em 0, 0.2em 50%, 0.7em 100%, 1.2em 75%, 1.2em 25%);
+  }
+  .level-tag.level-tag-shape-4::before {
+    clip-path: polygon(0.2em 0, 100% 0, calc(100% - 0.4em) 30%, calc(100% - 0.4em) 70%, 100% 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-shape-4::after {
+    clip-path: polygon(0.75em 0, 0.25em 30%, 0.25em 70%, 0.75em 100%, 1.25em 70%, 1.25em 30%);
+  }
+  .level-tag-color-0 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-0::before {
+    background: linear-gradient(to bottom, #a9a9a9 0, #c9c9c9 50%, #e4e4e4 50%, #c3c3c3 100%);
+  }
+  .level-tag.level-tag-shape-color-0::after {
+    background: linear-gradient(to bottom, #c9c9c9 0, #e4e4e4 50%, #c9c9c9 100%);
+  }
+  .level-tag-color-1 {
+    color: #fffD;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-1::before {
+    background: linear-gradient(to bottom, #bc3535 0, #fd3535 50%, #ff6d6d 50%, #f02d2d 100%);
+  }
+  .level-tag.level-tag-shape-color-1::after {
+    background: linear-gradient(to bottom, #fd3535 0, #ff6d6d 50%, #fd3535 100%);
+  }
+  .level-tag-color-2 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-2::before {
+    background: linear-gradient(to bottom, #bb6a34 0, #f56200 50%, #ffa162 50%, #ef7320 100%);
+  }
+  .level-tag.level-tag-shape-color-2::after {
+    background: linear-gradient(to bottom, #f56200 0, #ffa162 50%, #f56200 100%);
+  }
+  .level-tag-color-3 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-3::before {
+    background: linear-gradient(to bottom, #c6b734 0, #e9d41e 50%, #edde5f 50%, #e9d41e 100%);
+  }
+  .level-tag.level-tag-shape-color-3::after {
+    background: linear-gradient(to bottom, #e9d41e 0, #edde5f 50%, #e9d41e 100%);
+  }
+  .level-tag-color-4 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-4::before {
+    background: linear-gradient(to bottom, #82b933 0, #90dd21 50%, #b5f856 50%, #90dd21 100%);
+  }
+  .level-tag.level-tag-shape-color-4::after {
+    background: linear-gradient(to bottom, #90dd21 0, #b5f856 50%, #90dd21 100%);
+  }
+  .level-tag-color-5 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-5::before {
+    background: linear-gradient(to bottom, #31b951 0, #23ee53 50%, #7df89a 50%, #23ee53 100%);
+  }
+  .level-tag.level-tag-shape-color-5::after {
+    background: linear-gradient(to bottom, #23ee53 0, #7df89a 50%, #23ee53 100%);
+  }
+  .level-tag-color-6 {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-6::before {
+    background: linear-gradient(to bottom, #31a89b 0, #22f0da 50%, #8afdf1 50%, #22f0da 100%);
+  }
+  .level-tag.level-tag-shape-color-6::after {
+    background: linear-gradient(to bottom, #22f0da 0, #8afdf1 50%, #22f0da 100%);
+  }
+  .level-tag-color-7 {
+    color: #fffD;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-7::before {
+    background: linear-gradient(to bottom, #31599b 0, #1f6cec 50%, #84b2fe 50%, #1f6cec 100%);
+  }
+  .level-tag.level-tag-shape-color-7::after {
+    background: linear-gradient(to bottom, #1f6cec 0, #84b2fe 50%, #1f6cec 100%);
+  }
+  .level-tag-color-8 {
+    color: #fffD;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-8::before {
+    background: linear-gradient(to bottom, #673aba 0, #8644ff 50%, #bb96ff 50%, #8644ff 100%);
+  }
+  .level-tag.level-tag-shape-color-8::after {
+    background: linear-gradient(to bottom, #8644ff 0, #bb96ff 50%, #8644ff 100%);
+  }
+  .level-tag-color-9 {
+    color: #fffD;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-color-9::before {
+    background: linear-gradient(to bottom, #aa35ab 0, #e81bea 50%, #fea4ff 50%, #e81bea 100%);
+  }
+  .level-tag.level-tag-shape-color-9::after {
+    background: linear-gradient(to bottom, #e81bea 0, #fea4ff 50%, #e81bea 100%);
+  }
+  .level-tag.level-tag-golden::before {
+    clip-path: polygon(0.2em 0, calc(100% - 0.7em) 0, calc(100% - 0.35em) 50%, calc(100% - 0.7em) 100%, 0.2em 100%, 0 calc(100% - 0.2em), 0 0.2em);
+  }
+  .level-tag.level-tag-golden::before {
+    background: linear-gradient(to bottom, #ffb400 0, #ffd800 50%, #f7e167 50%, #ffd800 100%);
+  }
+  .level-tag.level-tag-golden {
+    color: #000D;
+    text-shadow: 0 0 2px #0006;
+  }
+  .level-tag.level-tag-golden::after {
+    left: 0;
+    top: 0;
+    right: 0.5em;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ffb400 0, #ffd800 50%, #f7e167 50%, #ffd800 100%);
+    filter: blur(8px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    will-change: transform;
+    width: unset;
+  }
+
+.oob_modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #eee;
+  color: #222;
+  z-index: 10000000;
+  transform: translate(-50%, -50%);
+  max-height: calc(95vh - 2em);
+  padding: 1em;
+  border-radius: 3px;
+  width: 30em;
+  max-width: calc(95vw - 2em);
+  font-family: HUN;
+  box-shadow: 0 0 48px #fff2;
+  transition: .3s opacity, .3s transform, .3s filter;
+}
+
+.oob_modal h1 {
+  margin: 0;
+  font-size: 1.65em;
+  font-weight: 500;
+}
+
+.oob_modal::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: -16px;
+  right: -16px;
+  bottom: -16px;
+  background-color: #000C;
+  border-radius: 3px;
+  filter: blur(32px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s opacity;
+}
+
+.tetra_modal {
+  width: 50em;
+  background-color: #243e25;
+  border-top: 3px solid #45794f;
+  border-left: 3px solid #3d6242;
+  border-bottom: 3px solid #162419;
+  border-right: 3px solid #1d3220;
+  box-shadow: 0 0 48px #0002;
+}
+
+.tetra_modal>.avatar {
+  position: absolute;
+  left: 1em;
+  top: -1em;
+  height: 5.5em;
+  box-shadow: 0 2px 4px #0008;
+}
+.avatar {
+  border-radius: 3px;
+}
+
+.tetra_modal_banner {
+  position: absolute;
+  z-index: -101;
+  left: -3px;
+  top: -3px;
+  width: calc(100% + 6px);
+  object-fit: cover;
+  height: 6em;
+  pointer-events: none;
+  border-radius: 3px 3px 0 0;
+}
+
+.tetra_modal_banner_sep {
+  position: absolute;
+  z-index: -100;
+  left: -3px;
+  top: calc(6em - 17px);
+  width: calc(100% + 6px);
+  height: 15px;
+  pointer-events: none;
+  background: url('https://tetr.io/res/banner-overlay.png');
+  background-repeat: repeat-x;
+  background-position-x: -2px;
+}
+
+.tetra_modal_banner_sep::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(to bottom, #0000 0, #3d6242 100%);
+}
+
+.tetra_modal_banner_sep::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  height: 50px;
+  background: linear-gradient(to bottom, #0000 0, #1d3220 100%);
+}
+
+.tetra_modal.has_banner>h2, .tetra_modal.has_banner>h3 {
+  color: #fff;
+  text-shadow: 0 2px 4px #0008;
+}
+.tetra_modal>.avatar+h2 {
+  padding-left: 2.4em;
+}
+
+.tetra_modal>h2>.flag {
+  height: .5em;
+  vertical-align: middle;
+}
+.tetra_modal>h2 img {
+  height: .78em;
+  margin-left: .15em;
+}
+.flag {
+  clip-path: polygon(0.1em 0, calc(100% - 0.1em) 0, 100% 0.1em, 100% calc(100% - 0.1em), calc(100% - 0.1em) 100%, 0.1em 100%, 0 calc(100% - 0.1em), 0 0.1em);
+}
+
+.oob_modal h2 {
+  color: #fff;
+  text-shadow: 0 2px 4px #0008;  margin: 0;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+.tetra_modal>.avatar+h2+h3 {
+  padding-left: 7.6em;
+}
+.tetra_modal.has_banner>h2, .tetra_modal.has_banner>h3 {
+  color: #fff;
+  text-shadow: 0 2px 4px #0008;
+}
+.tetra_modal>h3 {
+  font-size: .8em;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: .25em;
+}
+.tetra_modal>h1, .tetra_modal>h2, .tetra_modal>h3 {
+  color: #a1dba6;
+}
+
+.tetra_modal.has_banner>h3 img {
+  filter: drop-shadow(0 2px 4px #0006);
+}
+.tetra_modal>h3 img {
+  height: 1em;
+  vertical-align: -10%;
+  margin-top: -1em;
+  margin-right: .25em;
+}
+
+.tetra_modal.has_banner .tetra_tag_holder {
+  margin-top: 22px;
+}
+.tetra_tag_holder {
+  padding: .2em 0;
+  padding-bottom: .3em;
+  padding-top: .4em;
+}
+
+.tetra_tag_holder .leveltag {
+  font-size: 1.25em;
+  margin-right: 1rem;
+}
+.leveltag {
+  position: relative;
+  display: inline-block;
+  font-size: 1.1em;
+  padding-top: .3em;
+  padding-left: .3em;
+  padding-bottom: 0;
+  padding-right: 1em;
+  line-height: .9em;
+  color: #000D;
+  font-weight: 900;
+  text-shadow: 0 0 2px #0006;
+}
+
+.tetra_tag_gametime {
+  font-size: 1.25em;
+  display: inline-block;
+  padding: .1em .5em;
+  background-color: #0003;
+  color: #b3f4b6;
+  float: right;
+  border-radius: 3px;
+  padding-top: .3em;
+  margin-left: .2em;
+}
+
+.tetra_tag_gametime span {
+  color: #345a36;
+  font-size: .6em;
+  font-weight: 900;
+}
+
+.tetra_tag_record {
+  font-size: 1.25em;
+  display: inline-block;
+  padding: .1em .5em;
+  background-color: #0002;
+  color: #345a36;
+  float: right;
+  border-radius: 3px;
+  padding-top: .3em;
+  margin-left: .2em;
+}
+
+.tetra_tag_record span {
+  color: #b3f4b6;
+}
+
+.tetra_tag_holder .supporter_badge {
+  height: 1.9em;
+  margin: 0;
+  vertical-align: middle;
+  float: right;
+}
+
+.tetra_badge_holder {
+  margin: .25em -1em;
+  padding: .25em 1.1em;
+  padding-bottom: 0;
+  text-align: left;
+  background-color: #0002;
+}
+
+.tetra_badge {
+  height: 2em;
+  margin: 0;
+  margin-right: .25em;
+  transition: filter .2s;
+}
+
+.tetra_badstanding {
+  margin: .5em -3em;
+  padding: .7em 3.1em;
+  padding-bottom: .2em;
+  border-top: 3px solid #f81c1c;
+  border-bottom: 3px solid #f81c1c;
+  background: repeating-linear-gradient(102deg, #960e0e, #960e0e 10px, #750a0a 10px, #750a0a 20px);
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  clip-path: polygon(0% 50%, 1em 0%, calc(100% - 1em) 0%, 100% 50%, calc(100% - 1em) 100%, 1em 100%);
+}
+
+.tetra_modal_warning {
+  background-color: #0004;
+  color: #b3f4b6;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.tetra_modal.banned {
+  --rxa: #960E0E;
+  --rxb: #750A0A;
+  --lxa: 0.4em;
+  --lxb: 0.8em;
+  --lxc: 0.8em;
+  background: 0 0 / 50% 50% no-repeat repeating-linear-gradient(45deg, var(--rxa), var(--rxa) var(--lxa), var(--rxb) var(--lxa), var(--rxb) var(--lxb), var(--rxa) var(--lxb), var(--rxa) var(--lxc), var(--rxb) var(--lxc), var(--rxb) .8em), 100% 100% / 50% 50% no-repeat repeating-linear-gradient(225deg, var(--rxa), var(--rxa) var(--lxa), var(--rxb) var(--lxa), var(--rxb) var(--lxb), var(--rxa) var(--lxb), var(--rxa) var(--lxc), var(--rxb) var(--lxc), var(--rxb) .8em), 100% 0 / 50% 50% no-repeat repeating-linear-gradient(-45deg, var(--rxa), var(--rxa) var(--lxa), var(--rxb) var(--lxa), var(--rxb) var(--lxb), var(--rxa) var(--lxb), var(--rxa) var(--lxc), var(--rxb) var(--lxc), var(--rxb) .8em), 0 100% / 50% 50% no-repeat repeating-linear-gradient(135deg, var(--rxa), var(--rxa) var(--lxa), var(--rxb) var(--lxa), var(--rxb) var(--lxb), var(--rxa) var(--lxb), var(--rxa) var(--lxc), var(--rxb) var(--lxc), var(--rxb) .8em), var(--rxb);
+  border-top: 3px solid #f81c1c;
+  border-left: 3px solid #cf1f1f;
+  border-bottom: 3px solid #971b1b;
+  border-right: 3px solid #761919;
+  box-shadow: 0 0 48px #960E0E88;
+  height: 10.5em;
+  animation: .5s tmbanned infinite linear;
+}
+
+.tetra_modal.banned::after {
+  content: '';
+  display: block;
+  width: calc(100% + 5em);
+  height: 2em;
+  background: repeating-linear-gradient(0deg, #f81C1C88, #f81C1C88 .2em, #f81C1C44 .2em, #f81C1C44 .4em);
+  border-top: 3px solid #f81c1c;
+  border-bottom: 3px solid #f81c1c;
+  clip-path: polygon(0 50%, 1em 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 1em 100%);
+  pointer-events: none;
+  left: 50%;
+  top: 6.6em;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
+
+.tetra_modal.banned .tetra_modal_warning {
+  background: 0 0;
+  color: #fff;
+  text-shadow: 0 2px 4px #0008;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+  margin-top: .25em;
+  font-size: .98em;
+}
+
+@keyframes tmbanned {
+  0% {
+      --lxa: 0.4em;
+      --lxb: 0.8em;
+      --lxc: 0.8em
+  }
+
+  10% {
+      --lxa: 0.32em;
+      --lxb: 0.72em;
+      --lxc: 0.8em
+  }
+
+  20% {
+      --lxa: 0.24em;
+      --lxb: 0.64em;
+      --lxc: 0.8em
+  }
+
+  30% {
+      --lxa: 0.16em;
+      --lxb: 0.56em;
+      --lxc: 0.8em
+  }
+
+  40% {
+      --lxa: 0.08em;
+      --lxb: 0.48em;
+      --lxc: 0.8em
+  }
+
+  50% {
+      --lxa: 0.0em;
+      --lxb: 0.4em;
+      --lxc: 0.8em
+  }
+
+  60% {
+      --lxa: 0.0em;
+      --lxb: 0.32em;
+      --lxc: 0.72em
+  }
+
+  70% {
+      --lxa: 0.0em;
+      --lxb: 0.24em;
+      --lxc: 0.64em
+  }
+
+  80% {
+      --lxa: 0.0em;
+      --lxb: 0.16em;
+      --lxc: 0.56em
+  }
+
+  90% {
+      --lxa: 0.0em;
+      --lxb: 0.08em;
+      --lxc: 0.48em
+  }
+
+  100% {
+      --lxa: 0.0em;
+      --lxb: 0.0em;
+      --lxc: 0.4em
+  }
+}
+
+.tetra_modal.banned .tetra_modal_warning {
+  background: 0 0;
+  color: #fff;
+  text-shadow: 0 2px 4px #0008;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+  margin-top: .25em;
+  font-size: .98em;
+}
+
+.tetra_modal.banned .tetra_modal_warning h1 {
+  font-weight: 900;
+  font-size: 5em;
+  margin-bottom: .1em;
+}
+.tetra_modal_records {
+  text-align: center;
+  margin: -.25em;
+  margin-top: .1em;
+  justify-content: center;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tetra_modal_record {
+  display: inline-block;
+  padding: .25em;
+  margin: .25em;
+  border-radius: 3px;
+  background-color: #0002;
+  text-align: center;
+  position: relative;
+  max-width: 25rem;
+  min-width: 12rem;
+}
+.flex-item {
+  flex-shrink: 0;
+  flex-grow: 1;
+  margin-right: .25em;
+}
+
+.tetra_modal_record_header {
+  display: flex;
+  margin: -.25em;
+  margin-bottom: -.1em;
+}
+
+.tetra_modal_record>h5 {
+  color: #b3f4b6;
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 0 2px #90c397, 0 0 16px #fff4;
+  margin: .15em;
+  margin-bottom: 0;
+}
+
+.tetra_modal_record_league img {
+  height: 1.1em;
+  vertical-align: -20%;
+  margin-top: -1em;
+}
+
+.tetra_modal_record>h5>.ms {
+  font-size: .75em;
+}
+
+.tetra_modal_record_header>h6 {
+  flex-shrink: 0;
+  flex-grow: 1;
+  color: #345a36;
+  font-size: 1em;
+  margin: 0;
+  padding: .25em;
+  text-align: left;
+}
+
+.standingset {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.standingset_local {
+  display: inline-block;
+  padding: .2rem 0;
+  padding-bottom: 0;
+  font-size: .9rem;
+  color: #345a36;
+  padding-left: 1rem;
+}
+
+.standingset_global {
+  display: inline-block;
+  padding: .2rem .3rem;
+  padding-bottom: 0;
+  padding-left: .7rem;
+  font-size: .9rem;
+  color: #679c6a;
+  background-color: #345a36;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0.5rem 100%);
+  border-radius: 0 3px 0 0;
+}
+
+.standingset_global[data-digits="1"] {
+  background: linear-gradient(to bottom, #f7ca52 0, #ddb035 50%, #eace79 50%, #f3d176 100%);
+  color: #5a3c1f;
+}
+
+.standingset_global[data-digits="2"] {
+  background: linear-gradient(to bottom, #b2bad0 0, #a3abc1 50%, #b8c3de 50%, #d5def4 100%);
+  color: #3f4452;
+}
+
+
+.tetra_modal_record>h3 {
+  color: #679c6a;
+  font-size: .85em;
+  margin: .15em;
+  border-top: 1px solid #345a36;
+  padding-top: .5em;
+  margin-bottom: 0;
+}
+
+.tetra_modal_record>h3>span {
+  color: #b3f4b6;
+}
+
+.standingset_global.t1 {
+  background: linear-gradient(to bottom, #ce52f7 0, #cb35dd 50%, #d979ea 50%, #e776f3 100%);
+  color: #4b1f5a;
+}
+
+.standingset_global[data-digits="2"] span {
+  color: #0c0d11;
+}
+
+.standingset_global[data-digits="1"] span {
+  color: #161008;
+}
+
+.standingset_local .flag {
+  height: .7rem;
+  vertical-align: 0;
+  margin: unset;
+  mix-blend-mode: overlay;
+}
+
+.tetra_modal_record_header>img {
+  height: 1rem;
+  vertical-align: 0;
+  margin: unset;
+  mix-blend-mode: overlay;
+}
+
+.tetra_modal_record>h5>.unit {
+  font-size: .5em;
+  margin-left: .2em;
+  color: #90c397;
+}
