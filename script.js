@@ -1204,7 +1204,7 @@ function draw(){
   if(output.data.avatar_revision != 0){
     profile.innerHTML += '<img class="avatar" src="https://tetr.io/user-content/avatars/' + output.data._id + '.jpg?rv=' + output.data.avatar_revision + '">' 
   }
-  if(output.data.avatar_revision == 0 || output.data.role == 'anon' || output.data.role == 'hidden' || output.data.role == 'bot'){
+  if(output.data.avatar_revision == 0 || output.data.role == 'anon' || output.data.avatar_revision == undefined ){
     profile.innerHTML += '<img class="avatar" src="https://tetr.io/res/avatar.png">' 
   }
 //////////////////////////////////////////////
