@@ -1,8 +1,8 @@
 ---
 name: Issue
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
+about: Have bugs, create issue
+title: "[Bug]"
+labels: bug
 assignees: ''
 
 ---
@@ -10,4 +10,4 @@ assignees: ''
 # Checklist
 - [ ]  I have checked that this issue is unique (not duplicated)
 # Issue
-Just write, recommend to add screenshots
+Just write, recommend to add screenshots, if the issue only affect some accounts, list them
