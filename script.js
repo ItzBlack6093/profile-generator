@@ -1150,8 +1150,8 @@ async function getData(user) {
 
     const endpoint = 'https://ch.tetr.io/api/users/';
     try {
-      const response = await fetch('https://cors-anywhere.herokuapp.com/' + endpoint + user);
-      const responseRecord = await fetch('https://cors-anywhere.herokuapp.com/' + endpoint + user + '/summaries');
+      const response = await fetch('https://cors-anywhere.herokuapp.com/' + endpoint + user.toLocaleLowerCase());
+      const responseRecord = await fetch('https://cors-anywhere.herokuapp.com/' + endpoint + user.toLocaleLowerCase() + '/summaries');
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
