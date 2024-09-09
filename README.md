@@ -3,8 +3,6 @@
 
 Like the title, this thing generate [TETR.IO](https://tetr.io/) profile
 
-#
-
 # About 'mode-icon' branch
 
 This branch will generate with 6 modes, along with its icon
@@ -18,4 +16,14 @@ This branch will generate with 6 modes, along with its icon
 
 ...but it will be 2x3 instead of normal 3x2
 and you need to type the username lowercased...
+
+# How to use
++ go to http://cors-anywhere.herokuapp.com/corsdemo
++ request temporary access...
++ go to https://itzblack6093.github.io/profile-generator/
++ type username or user id
++ press 'fetch'
++ wait...
++ press 'draw'
+
 
