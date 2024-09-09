@@ -16,3 +16,5 @@ This branch will generate with 6 modes
 + Expert Quick Play
 + Zen (Score and Level (Symbols))
 
+You need to type the username lowercased...
+
