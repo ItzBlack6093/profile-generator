@@ -17,3 +17,5 @@ This branch will generate with 6 modes, along with its icon
 + Zen (Score and Level (Symbols))
 
 ...but it will be 2x3 instead of normal 3x2
+and you need to type the username lowercased...
+
