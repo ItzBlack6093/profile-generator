@@ -1,7 +1,7 @@
 
 # Profile Generator for TETR.IO
 
-Like the title, this thing generate [TETR.IO](https://tetr.io/) profile
+Like the title, this thing generate [TETR.IO](https://tetr.io/) profile cus idk hiyayo maho didnt generate qp2
 
 
 # About 'main' branch
