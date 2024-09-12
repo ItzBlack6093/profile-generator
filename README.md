@@ -3,6 +3,8 @@
 
 Like the title, this thing generate [TETR.IO](https://tetr.io/) profile cus idk hiyayo maho didnt generate qp2
 
+Up-to-date with tetrio beta 1.2.4
+
 
 # About 'main' branch
 
